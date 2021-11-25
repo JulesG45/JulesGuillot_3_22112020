@@ -1,0 +1,343 @@
+/* Barre de chargement */
+.chargement {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation-name: loader;
+    animation-duration: 2s;
+}
+
+.chargement_bloc {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chargement_bloc-cercle {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 15px solid #fff;
+    border-bottom-color: transparent;
+    animation-name: circle;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    visibility: hidden;
+}
+
+/* Header */
+header {
+    box-sizing: border-box;
+    height: 4rem;
+}
+
+header h1 {
+    font-family: 'Shrikhand', sans-serif;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+main {
+    width: 100%;
+}
+
+/* Localisation */
+
+.localisation {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #eaeaea;
+    height: 2.5rem;
+    align-items: center;
+    box-shadow: inset 0px 11px 3px -9px #CCC;
+}
+
+.localisation i {
+    margin-right: 0.5rem;
+}
+
+/* Réservation */
+
+.reservation {
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.reservation h2 {
+    margin-bottom: 0;
+    margin-top: 3rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    text-align: center;
+}
+
+.reservation p {
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    text-align: center;
+}
+
+.reservation .btn {
+    display: block;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    background-size: 200%;
+    background-image: linear-gradient(90deg, #FF79DA, #9356DC);
+    background-position: 80%;
+    text-decoration: none;
+    padding: 1rem 1rem 1rem 1rem;
+    border-radius: 2rem;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 5px 5px #0000002e;
+    margin-bottom: 3rem;
+}
+
+.reservation .btn:hover {
+    transform: scale(1.05);
+    background-position: 30%;
+}
+
+/* Fonctionnement */
+.fonctionnement {
+    margin-top: 3rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.fonctionnement h2 {
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    text-align: center;
+}
+
+.fonctionnement_liste {
+    padding-top: 0.5rem;
+}
+
+.fonctionnement_liste div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6f6f6;
+    border-radius: 2rem;
+    box-shadow: 0 0.1rem 0.2rem 0.2rem rgba(214, 209, 209, 0.699);
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    height: 4rem;
+    transition: all 0.2s ease-in;
+    position: relative;
+}
+
+.fonctionnement_liste div i {
+        position: absolute;
+        left: 1.1rem;
+        color: #bdbdbd; 
+}
+
+.fonctionnement_liste div:hover {
+    background-color: #f5edff;
+    box-shadow: 10px 20px 19px rgba(0, 0, 0, 0.1);
+    transform: scale(1.01);
+}
+
+.fonctionnement_liste i {
+    color: #A9A9A9;
+    position: absolute;
+    left: 3rem;
+}
+
+.fonctionnement_liste div:hover i {
+    color: #9356DC;
+}
+
+.fonctionnement_liste span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: #9356DC;
+    position: absolute;
+    left: -1rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    border: 1px solid #9356DC;
+    border-radius: 1rem;
+}
+
+/* SECTION RESTAURANTS */
+.restaurants {
+    background-color: #efefef;
+}
+
+.restaurants h2 {
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.restaurants div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+figure {
+    border-radius: 1rem;
+    padding: 0;
+    margin-bottom: 2rem;
+    position: relative;
+    transition: all .3s ease-in-out;
+    box-shadow: 0 0 0.8rem rgba(134, 134, 134, 0.432);
+    width: 80%;
+}
+
+figure h3, figure figcaption {
+    font-size: 100%;
+    margin: 1rem;
+}
+
+figure:hover {
+    transform: scale(1.05);
+}
+
+figure img {
+    object-fit: cover;
+    border-radius: 1rem 1rem 0 0;
+    height: 12rem;
+    width: 100%;
+}
+
+figure a {
+    text-decoration: none;
+    color: #000;
+}
+
+.nouveau {
+    position: absolute;
+    padding: 0.5rem;
+    background-color: #99E2D0;
+    color: #35a78b;
+    font-weight: bold;
+    right: 1.5rem;
+    top: 1rem;
+}
+
+.coeur, .coeur-like {
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.coeur i {
+    opacity: 1;
+}
+
+.coeur-like i {
+    opacity: 0;
+}
+
+.coeur i:hover {
+    opacity: 0;
+}
+
+.coeur-like i:hover {
+    opacity: 1;
+    background: linear-gradient(90deg, #FF79DA, #9356DC);
+    -webkit-background-clip: text;
+    color: transparent;
+    border-radius: 0.5rem;
+}
+
+/* Media queries */
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .fonctionnement {
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 0;
+    }
+
+    .fonctionnement header {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .restaurants header {
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    .restaurants div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+
+    figure {
+        width: 100%;
+    }
+}
+
+@media (min-width: 993px) {
+    .fonctionnement div {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .fonctionnement h2 {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .restaurants h2 {
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    .restaurants div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+
+    figure {
+        width: 40%;
+    }
+}
