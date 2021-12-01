@@ -9,7 +9,7 @@ body {
 }
 
 p {
-    font-family: 'Roboto Light', arial;
+    font-family: 'Roboto Light', sans-serif;
 }
 
 h2, h3, h4, span {
@@ -25,7 +25,7 @@ footer {
 }
 
 footer h3 {
-    font-family: 'Shrikhand', cursive;
+    font-family: 'Shrikhand', sans-serif;
     margin-left: 2.5rem;
 }
 
@@ -43,18 +43,9 @@ footer li {
 footer li:hover a {
     color: #9356DC;
 }
-
-@media (min-width: 992px) {
-    footer {
-        flex-direction: row;
+@media (min-width: 993px) {
+    body {
+        width: 993px;
+        align-items: center;
+        justify-content: center;
     }
-    footer ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-    footer ul li {
-        margin-right: 50px;
-        margin-top: 8px;
-    }
-}
