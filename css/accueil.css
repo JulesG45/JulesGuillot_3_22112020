@@ -26,6 +26,35 @@
     animation-timing-function: ease-in-out;
     visibility: hidden;
 }
+@keyframes circle {
+    0% {
+        visibility: visible;
+        transform: rotate(0deg);
+    }
+    99% {
+        visibility: visible;
+        transform: rotate(1500deg);
+    }
+    100% {
+        z-index: -1;
+        visibility: hidden;
+    }
+}
+@keyframes loader {
+    0% {
+        background-color: #9356DC;
+        z-index: 1;
+    }
+    99% {
+        z-index: 1;
+        background-color: #9356DC;
+    }
+    100% {
+        z-index: -1;
+        visibility: hidden;
+    }
+}
+/* + modifier media queries pc pour version feuille */
 
 /* Header */
 header {
@@ -89,7 +118,6 @@ main {
     display: block;
     outline: none;
     border: none;
-    text-decoration: none;
     cursor: pointer;
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
@@ -145,15 +173,15 @@ main {
 }
 
 .fonctionnement_liste div i {
-        position: absolute;
-        left: 1.1rem;
-        color: #bdbdbd; 
+    position: absolute;
+    left: 1.1rem;
+    color: #bdbdbd; 
 }
 
 .fonctionnement_liste div:hover {
     background-color: #f5edff;
     box-shadow: 10px 20px 19px rgba(0, 0, 0, 0.1);
-    transform: scale(1.01);
+    transform: scale(1.05);
 }
 
 .fonctionnement_liste i {
@@ -231,7 +259,10 @@ figure a {
 
 .nouveau {
     position: absolute;
+    border-radius: 0.2rem;
     padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     background-color: #99E2D0;
     color: #35a78b;
     font-weight: bold;
@@ -239,33 +270,39 @@ figure a {
     top: 1rem;
 }
 
-.coeur, .coeur-like {
-    position: absolute;
-    right: 2rem;
-    bottom: 2rem;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: all .3s ease-in-out;
+ .icon {
+     fill: transparent;
+     stroke: black;
+     stroke-width: 50;
+     cursor: pointer;
+     position: absolute;
+     right: 1.5rem;
+     bottom: 2rem;
+}
+ .icon svg {
+     overflow: visible;
+     width: 1.6rem;
+}
+ .icon path {
+     stroke-dashoffset: 0;
+     stroke-dasharray: 1550;
+     transform-origin: center;
+}
+ .icon .heart-main:active path {
+     animation: fill-animation 2s ease-in-out forwards;
+     stroke: #9356DC;
 }
 
-.coeur i {
-    opacity: 1;
-}
-
-.coeur-like i {
-    opacity: 0;
-}
-
-.coeur i:hover {
-    opacity: 0;
-}
-
-.coeur-like i:hover {
-    opacity: 1;
-    background: linear-gradient(90deg, #FF79DA, #9356DC);
-    -webkit-background-clip: text;
-    color: transparent;
-    border-radius: 0.5rem;
+ @keyframes fill-animation {
+    10% {
+         fill: linear-gradient(90deg, #FF79DA, #9356DC);
+    }
+     80% {
+         fill: #9356DC;
+    }
+     100% {
+         fill: #9356DC;
+    }
 }
 
 /* Media queries */
@@ -339,6 +376,19 @@ figure a {
     }
 
     figure {
-        width: 40%;
+        width: 100%;
     }
+     .icon .heart-main:hover {
+        stroke: #9356DC;
+    }
+    .icon .heart-main:active {
+        stroke: #9356DC;
+    }
+      .icon .heart-main:visited {
+        stroke: #9356DC;
+     }
+    .icon .heart-main:hover path {
+        animation: fill-animation 2s ease-in-out forwards;
+        stroke: #9356DC;
+}
 }
