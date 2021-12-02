@@ -1,0 +1,284 @@
+/* Header */
+
+main {
+    background-color: #f6f6f6;
+}
+h3 {
+    font-size: 18px;
+}
+header {
+    height: 3.5rem;
+    position: relative;
+    margin-top: 0.6rem;
+}
+header h1 {
+    font-family: 'Shrikhand', sans-serif;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+header a {
+    position: absolute;
+    left: 1.2rem;
+    top: 0.5rem;
+}
+header i {
+    font-size: 1.3rem;
+    margin-top: 0.2rem;
+    color: black;
+}
+.fa-arrow-left:hover {
+    color: #9356DC;
+}
+
+/* Image du haut */
+
+.image__top img {
+    height: 17rem;
+    width: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Zone du dessus des menus : Titre + Coeur */
+
+#menu {
+    background-color: #f6f6f6;
+    position: relative;
+    border-top-left-radius: 2.5rem;
+    border-top-right-radius: 2.5rem;
+    bottom: 3.5rem;
+    z-index: 1;
+}
+#menu .title {
+    display: flex;
+    margin-left: 1.5rem;
+    margin-right: 1rem;
+    margin-bottom: 3rem;
+    padding-top: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+}
+.menu__title {
+    font-family: 'Shrikhand', sans-serif;
+    font-weight: lighter;
+    font-size: 30px;
+}
+.icon {
+     fill: transparent;
+     stroke: black;
+     stroke-width: 25;
+     cursor: pointer;
+     position: absolute;
+     right: 2rem;
+}
+.icon svg {
+     overflow: visible;
+     width: 1.5rem;
+}
+.icon .heart-main:active path {
+     animation: fill-animation 0.1s ease-in-out forwards;
+     stroke: none;
+}
+
+@keyframes fill-animation {
+  0%{
+     fill-opacity: 0.1;
+  }
+  10% {
+     fill: url(#FillGradient);
+     fill-opacity: 0.1;
+  }
+  80% {
+     fill: url(#FillGradient);
+     fill-opacity: 1;
+  }
+  100% {
+     fill: url(#FillGradient);
+     fill-opacity: 1;
+  }
+}
+
+/* Entrées + Plats + Desserts */
+
+.meal section {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.meal section h2 {
+    font-family: Roboto, sans-serif;
+    font-weight: lighter;
+    font-size: 100%;
+}
+.meal hr {
+    height: 0.2rem;
+    width: 2.6rem;
+    border: none;
+    background-color: #99E2D0;
+    margin-left: 0;
+    margin-bottom: 2rem;
+}
+.meal div {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px #0000002e;
+    margin-bottom: 2rem;
+    height: 4rem;
+    position: relative;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    animation: fadeIn 0.7s ease-in both, top 0.5s linear;
+    cursor: pointer;
+}
+.meal div:nth-of-type(1) {
+    animation-delay: 0.1s;
+}
+.meal div:nth-of-type(2) {
+    animation-delay: 0.3s;
+}
+.meal div:nth-of-type(3) {
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        top: 3rem;
+        opacity: 0;
+    }
+    to {
+        top: 0rem;
+        opacity: 1;
+    }
+}
+.meal__price {
+    position: absolute;
+    top: 2rem;
+    font-weight: bold;
+    left: 85%; 
+}
+.price {
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+    font-weight: bold;
+}
+.meal h3, .meal__description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.meal h3 {
+    position: absolute;
+    top: 0;
+    width: 70%;
+}
+.meal__description {
+    position: absolute;
+    top: 2rem;
+    font-size: 16px;
+    width: 70%;
+}
+.meal span {
+    position: absolute;
+    background-color: #99E2D0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    bottom: 0rem;
+    width: 0%;
+    justify-content: center;
+    border-top-right-radius: 0.9rem;
+    border-bottom-right-radius: 0.9rem;
+    left: 100%;
+    color: white;
+    font-size: 1.375rem;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+.fa-check-circle {
+    visibility: hidden;
+}
+.meal div:hover span {
+    left: 80%;
+    visibility: visible;
+    width: 20%;
+}
+.meal div:hover .fa-check-circle {
+    visibility: visible;
+}
+.meal div:hover .meal__price {
+    left: 65%;
+}
+.meal div:hover .meal__description {
+    width: 50%;
+}
+.meal div:hover i {
+    animation: rotation 0.4s linear 0s;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Bouton Commander */
+
+.commander {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+}
+.commander .btn {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    display: block;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    background-size: 200%;
+    background-image: linear-gradient(90deg, #FF79DA, #9356DC);
+    background-position: 80%;
+    text-decoration: none;
+    padding: 1rem 1rem 1rem 1rem;
+    border-radius: 2rem;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 5px 5px #0000002e;
+    margin-bottom: 3rem;
+    width: 10rem;
+    position: relative;
+}
+.commander .btn:hover {
+    transform: scale(1.05);
+    background-position: 30%;
+}
+
+/* Media Queries */
+
+@media (min-width: 993px) {
+    .menu_title {
+        font-size: large;
+        text-align: center;
+    }
+
+    .meal div:hover span {
+        left: 80%;
+        width: 20%;
+    }
+
+    .meal__price {
+        left: 80%;
+    }
+
+    .meal div:hover .meal__price {
+        left: 70%;
+    }
+
+    .icon .heart-main:hover path {
+        animation: fill-animation 0.5s ease-in-out forwards;
+        stroke: none; 
+    }
+}

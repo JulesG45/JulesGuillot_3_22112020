@@ -1,12 +1,13 @@
 /* Barre de chargement */
+
 .chargement {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: absolute;
     animation-name: loader;
     animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
-
 .chargement_bloc {
     width: 100%;
     height: 100%;
@@ -14,7 +15,6 @@
     align-items: center;
     justify-content: center;
 }
-
 .chargement_bloc-cercle {
     width: 130px;
     height: 130px;
@@ -54,20 +54,20 @@
         visibility: hidden;
     }
 }
-/* + modifier media queries pc pour version feuille */
 
 /* Header */
+
 header {
     box-sizing: border-box;
     height: 4rem;
+    margin-bottom: 1rem;
 }
-
 header h1 {
     font-family: 'Shrikhand', sans-serif;
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 0rem;
+    padding-top: 1rem;
 }
-
 main {
     width: 100%;
 }
@@ -83,7 +83,6 @@ main {
     align-items: center;
     box-shadow: inset 0px 11px 3px -9px #CCC;
 }
-
 .localisation i {
     margin-right: 0.5rem;
 }
@@ -97,15 +96,13 @@ main {
     align-items: center;
     flex-direction: column;
 }
-
 .reservation h2 {
     margin-bottom: 0;
     margin-top: 3rem;
     margin-right: 2rem;
-    margin-left: 2rem;
+    margin-left: rem;
     text-align: center;
 }
-
 .reservation p {
     flex-wrap: wrap;
     margin-bottom: 2rem;
@@ -113,7 +110,6 @@ main {
     margin-left: 2rem;
     text-align: center;
 }
-
 .reservation .btn {
     display: block;
     outline: none;
@@ -123,7 +119,7 @@ main {
     font-family: 'Roboto', sans-serif;
     color: #fff;
     background-size: 200%;
-    background-image: linear-gradient(90deg, #FF79DA, #9356DC);
+    background-image: linear-gradient(80deg, #FF79DA, #9356DC);
     background-position: 80%;
     text-decoration: none;
     padding: 1rem 1rem 1rem 1rem;
@@ -132,69 +128,61 @@ main {
     box-shadow: 0 5px 5px #0000002e;
     margin-bottom: 3rem;
 }
-
 .reservation .btn:hover {
     transform: scale(1.05);
     background-position: 30%;
 }
 
 /* Fonctionnement */
+
 .fonctionnement {
     margin-top: 3rem;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
     margin-bottom: 3rem;
 }
-
 .fonctionnement h2 {
     margin-bottom: 1rem;
     margin-top: 2rem;
     margin-right: 2rem;
-    margin-left: 2rem;
-    text-align: center;
+    margin-left: 0rem;
+    text-align: left;
 }
-
-.fonctionnement_liste {
+.fonctionnement__liste {
     padding-top: 0.5rem;
 }
-
-.fonctionnement_liste div {
+.fonctionnement__liste div {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #f6f6f6;
-    border-radius: 2rem;
-    box-shadow: 0 0.1rem 0.2rem 0.2rem rgba(214, 209, 209, 0.699);
+    border-radius: 1rem;
+    box-shadow: 0 0.1rem 0.3rem 0.3rem rgba(233, 233, 233);
     margin-bottom: 2rem;
     margin-top: 2rem;
     height: 4rem;
     transition: all 0.2s ease-in;
     position: relative;
+    cursor: pointer;
 }
-
-.fonctionnement_liste div i {
+.fonctionnement__liste div i {
     position: absolute;
     left: 1.1rem;
     color: #bdbdbd; 
 }
-
-.fonctionnement_liste div:hover {
+.fonctionnement__liste div:hover {
     background-color: #f5edff;
-    box-shadow: 10px 20px 19px rgba(0, 0, 0, 0.1);
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
-
-.fonctionnement_liste i {
+.fonctionnement__liste i {
     color: #A9A9A9;
     position: absolute;
     left: 3rem;
 }
-
-.fonctionnement_liste div:hover i {
+.fonctionnement__liste div:hover i {
     color: #9356DC;
 }
-
-.fonctionnement_liste span {
+.fonctionnement__liste span {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -213,50 +201,48 @@ main {
 .restaurants {
     background-color: #efefef;
 }
-
 .restaurants h2 {
-    text-align: center;
-    padding-top: 1rem;
+    text-align: left;
+    padding-top: 3.5rem;
+    margin-left: 1.5rem;
 }
-
 .restaurants div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 2rem;
 }
-
 figure {
     border-radius: 1rem;
     padding: 0;
     margin-bottom: 2rem;
     position: relative;
-    transition: all .3s ease-in-out;
+    transition: all .4s ease-in-out;
     box-shadow: 0 0 0.8rem rgba(134, 134, 134, 0.432);
-    width: 80%;
+    width: 90%;
 }
-
-figure h3, figure figcaption {
-    font-size: 100%;
+figure h3 {
+    font-size: 19px;
     margin: 1rem;
+    margin-bottom: 0.2rem;
 }
-
+figure figcaption {
+    font-size: 20px;
+    margin: 1rem;
+    margin-top: 0.2rem;
+}
 figure:hover {
     transform: scale(1.05);
 }
-
 figure img {
     object-fit: cover;
     border-radius: 1rem 1rem 0 0;
     height: 12rem;
     width: 100%;
 }
-
 figure a {
     text-decoration: none;
     color: #000;
 }
-
 .nouveau {
     position: absolute;
     border-radius: 0.2rem;
@@ -269,11 +255,10 @@ figure a {
     right: 1.5rem;
     top: 1rem;
 }
-
  .icon {
      fill: transparent;
      stroke: black;
-     stroke-width: 50;
+     stroke-width: 25;
      cursor: pointer;
      position: absolute;
      right: 1.5rem;
@@ -283,26 +268,27 @@ figure a {
      overflow: visible;
      width: 1.6rem;
 }
- .icon path {
-     stroke-dashoffset: 0;
-     stroke-dasharray: 1550;
-     transform-origin: center;
-}
- .icon .heart-main:active path {
-     animation: fill-animation 2s ease-in-out forwards;
-     stroke: #9356DC;
+.icon .heart-main:active path {
+     animation: fill-animation 0.1s ease-in-out forwards;
+     stroke: none;
 }
 
- @keyframes fill-animation {
-    10% {
-         fill: linear-gradient(90deg, #FF79DA, #9356DC);
-    }
-     80% {
-         fill: #9356DC;
-    }
-     100% {
-         fill: #9356DC;
-    }
+@keyframes fill-animation {
+  0%{
+     fill-opacity: 0.1;
+  }
+  10% {
+     fill: url(#FillGradient);
+     fill-opacity: 0.1;
+  }
+  80% {
+     fill: url(#FillGradient);
+     fill-opacity: 1;
+  }
+  100% {
+     fill: url(#FillGradient);
+     fill-opacity: 1;
+  }
 }
 
 /* Media queries */
@@ -319,6 +305,9 @@ figure a {
         justify-content: center;
         margin-top: 1rem;
         margin-bottom: 1rem;
+    }
+    .restaurants h2 {
+        margin-left: 10%;
     }
 
     .restaurants header {
@@ -345,25 +334,14 @@ figure a {
 }
 
 @media (min-width: 993px) {
-    .fonctionnement div {
+    .fonctionnement {
         margin-left: 10%;
         margin-right: 10%;
-    }
-
-    .fonctionnement h2 {
-        display: flex;
-        justify-content: center;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+        margin-top: 0;
     }
 
     .restaurants h2 {
-        display: flex;
-        justify-content: center;
-        padding-left: 0;
-        padding-right: 0;
-        padding-top: 1rem;
-        padding-bottom: 2rem;
+        margin-left: 10%;
     }
 
     .restaurants div {
@@ -378,17 +356,8 @@ figure a {
     figure {
         width: 100%;
     }
-     .icon .heart-main:hover {
-        stroke: #9356DC;
-    }
-    .icon .heart-main:active {
-        stroke: #9356DC;
-    }
-      .icon .heart-main:visited {
-        stroke: #9356DC;
-     }
     .icon .heart-main:hover path {
-        animation: fill-animation 2s ease-in-out forwards;
-        stroke: #9356DC;
-}
+        animation: fill-animation 0.5s ease-in-out forwards;
+        stroke: none; 
+    }
 }

@@ -27,6 +27,8 @@ footer {
 footer h3 {
     font-family: 'Shrikhand', sans-serif;
     margin-left: 2.5rem;
+    font-weight: lighter;
+    margin-bottom: 2px;
 }
 
 footer a {
@@ -46,6 +48,4 @@ footer li:hover a {
 @media (min-width: 993px) {
     body {
         width: 993px;
-        align-items: center;
-        justify-content: center;
-    }
+}
