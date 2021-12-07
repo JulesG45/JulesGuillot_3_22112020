@@ -2,10 +2,10 @@
 
 .chargement {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: absolute;
-    animation-name: loader;
-    animation-duration: 2s;
+    animation-name: loading;
+    animation-duration: 2.5s;
     animation-fill-mode: forwards;
 }
 .chargement_bloc {
@@ -18,11 +18,11 @@
 .chargement_bloc-cercle {
     width: 130px;
     height: 130px;
-    border-radius: 50%;
-    border: 15px solid #fff;
-    border-bottom-color: transparent;
+    border-radius: 100%;
+    border: 20px solid #fff;
+    border-right-color: transparent;
     animation-name: circle;
-    animation-duration: 2s;
+    animation-duration: 2.5s;
     animation-timing-function: ease-in-out;
     visibility: hidden;
 }
@@ -40,7 +40,7 @@
         visibility: hidden;
     }
 }
-@keyframes loader {
+@keyframes loading {
     0% {
         background-color: #9356DC;
         z-index: 1;
@@ -60,16 +60,18 @@
 header {
     box-sizing: border-box;
     height: 4rem;
-    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    background-color: white;
 }
 header h1 {
     font-family: 'Shrikhand', sans-serif;
     text-align: center;
     margin-top: 0rem;
-    padding-top: 1rem;
+    padding-top: 0.5rem;
 }
 main {
     width: 100%;
+    background-color: white;
 }
 
 /* Localisation */
@@ -82,6 +84,9 @@ main {
     height: 2.5rem;
     align-items: center;
     box-shadow: inset 0px 11px 3px -9px #CCC;
+}
+.localisation p {
+    font-size: 15px;
 }
 .localisation i {
     margin-right: 0.5rem;
@@ -100,7 +105,7 @@ main {
     margin-bottom: 0;
     margin-top: 3rem;
     margin-right: 2rem;
-    margin-left: rem;
+    margin-left: 1rem;
     text-align: center;
 }
 .reservation p {
@@ -122,7 +127,7 @@ main {
     background-image: linear-gradient(80deg, #FF79DA, #9356DC);
     background-position: 80%;
     text-decoration: none;
-    padding: 1rem 1rem 1rem 1rem;
+    padding: 1rem 1.6rem 1rem 1.6rem;
     border-radius: 2rem;
     transition: all 0.4s ease-in-out;
     box-shadow: 0 5px 5px #0000002e;
@@ -216,8 +221,8 @@ figure {
     padding: 0;
     margin-bottom: 2rem;
     position: relative;
-    transition: all .4s ease-in-out;
-    box-shadow: 0 0 0.8rem rgba(134, 134, 134, 0.432);
+    transition: all .2s ease-in-out;
+    box-shadow: 0 0 0.4rem rgba(134, 134, 134, 0.432);
     width: 90%;
 }
 figure h3 {
@@ -231,7 +236,7 @@ figure figcaption {
     margin-top: 0.2rem;
 }
 figure:hover {
-    transform: scale(1.05);
+    box-shadow: 0 0 1.5rem rgba(134 ,134 ,134 , 0.432); 
 }
 figure img {
     object-fit: cover;
@@ -324,8 +329,8 @@ figure a {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
-        margin-left: 4rem;
-        margin-right: 4rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
     }
 
     figure {
@@ -355,6 +360,11 @@ figure a {
 
     figure {
         width: 100%;
+    }
+
+     .icon {
+        right: 0rem;
+        bottom: 2rem;
     }
     .icon .heart-main:hover path {
         animation: fill-animation 0.5s ease-in-out forwards;
