@@ -260,8 +260,8 @@ header i {
     border-radius: 2rem;
     transition: all 0.4s ease-in-out;
     box-shadow: 0 5px 5px #0000002e;
-    margin-bottom: 3rem;
-    width: 10rem;
+    margin-bottom: 0.5rem;
+    width: 12rem;
     position: relative;
 }
 .commander .btn:hover {
