@@ -8,14 +8,14 @@
     animation-duration: 2.5s;
     animation-fill-mode: forwards;
 }
-.chargement_bloc {
+.chargement__bloc {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.chargement_bloc-cercle {
+.chargement__bloc-cercle {
     width: 130px;
     height: 130px;
     border-radius: 100%;
@@ -87,6 +87,9 @@ main {
 }
 .localisation p {
     font-size: 15px;
+    font-weight: 600;
+    color: #4D4D4D;
+    padding-left: 0.3rem;
 }
 .localisation i {
     margin-right: 0.5rem;
@@ -172,7 +175,7 @@ main {
 }
 .fonctionnement__liste div i {
     position: absolute;
-    left: 1.1rem;
+    left: 1.6rem;
     color: #bdbdbd; 
 }
 .fonctionnement__liste div:hover {
@@ -205,6 +208,7 @@ main {
 
 .restaurants {
     background-color: #efefef;
+    padding-bottom: 2rem;
 }
 .restaurants h2 {
     text-align: left;
