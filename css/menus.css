@@ -3,9 +3,7 @@
 main {
     background-color: #f6f6f6;
 }
-h3 {
-    font-size: 18px;
-}
+
 header {
     height: 4rem;
     position: relative;
@@ -101,6 +99,12 @@ header i {
 
 /* Entrées + Plats + Desserts */
 
+h3 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 600;
+    width: 100%;
+}
 .meal section {
     margin-left: 1rem;
     margin-right: 1rem;
@@ -120,17 +124,25 @@ header i {
     margin-left: 0;
     margin-bottom: 1rem;
 }
-.meal div {
+.meal .meal__block, .meal__block--long {
+    display: flex;
+    justify-content: space-between;
     background-color: white;
     border-radius: 1rem;
     box-shadow: 0 0 10px #0000002e;
     margin-bottom: 2rem;
-    height: 4rem;
     position: relative;
-    padding-left: 1rem;
+    padding-left: 0.8rem;
     padding-top: 1rem;
     animation: fadeIn 0.7s ease-in both, top 0.5s linear;
     cursor: pointer;
+}
+.meal__text {
+    width: 87%;
+}
+.meal__description {
+    margin-top: 10px;
+    font-size: 17px;
 }
 .meal div:nth-of-type(1) {
     animation-delay: 0.2s;
@@ -153,34 +165,16 @@ header i {
     }
 }
 .meal__price {
-    position: absolute;
-    top: 2rem;
     font-weight: bold;
-    left: 85%; 
+    padding-right: 1rem;
+    padding-top: 1.1rem;
 }
-.price {
-    position: absolute;
-    right: 2rem;
-    top: 1rem;
-    font-weight: bold;
-}
-.meal h3, .meal__description {
+.meal__description {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-.meal h3 {
-    position: absolute;
-    top: 0;
-    width: 70%;
-}
-.meal__description {
-    position: absolute;
-    top: 2rem;
-    font-size: 16px;
-    width: 70%;
-}
-.meal span {
+.meal .meal__circle {
     position: absolute;
     background-color: #99E2D0;
     height: 100%;
@@ -193,26 +187,28 @@ header i {
     border-bottom-right-radius: 0.9rem;
     left: 100%;
     color: white;
-    font-size: 1.375rem;
+    font-size: 1.38rem;
     visibility: hidden;
     transition: all 0.5s;
 }
 .fa-check-circle {
     visibility: hidden;
 }
-.meal div:hover span {
+.meal div:hover .meal__circle {
     left: 80%;
     visibility: visible;
     width: 20%;
 }
-.meal div:hover .meal__price {
-    left: 65%;
-}
-.meal div:hover .meal__description {
-    width: 50%;
+.meal div:hover .meal__text {
+    width: 65%;
 }
 .meal div:hover i {
     animation: rotation 0.4s linear 0.15s forwards;
+}
+.meal__block:hover .meal__text h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 @keyframes rotation {
@@ -230,10 +226,10 @@ header i {
 
 @keyframes move-animation {
     from {
-        left: 85%;
+        padding-right: 1%;
     }
     to {
-        left: 70%;
+        padding-right: 25%;
     }
 }
 
@@ -277,13 +273,9 @@ header i {
         text-align: center;
     }
 
-    .meal div:hover span {
+    .meal div:hover .meal__circle {
         left: 80%;
         width: 20%;
-    }
-
-    .meal__price {
-        left: 90%;
     }
 
     .meal div:hover .meal__price {
@@ -292,10 +284,10 @@ header i {
 
     @keyframes move-animation {
     from {
-        left: 90%;
+        padding-right: 0%;
     }
     to {
-        left: 70%;
+        padding-right: 25%;
     }
 }
 
