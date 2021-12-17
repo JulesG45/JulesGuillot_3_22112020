@@ -8,7 +8,7 @@ Un debrief complet du site est disponible ici : ![Debrief](https://s3.eu-west-1.
 
 Présentation du visuel du projet :
 
-![Visuel Ohmyfood!](https://zupimages.net/viewer.php?id=21/50/whv2.png)
+![presentation](https://user-images.githubusercontent.com/91476879/146531839-75f066c1-f5ae-4c51-bffb-85ff2efd34ec.png)
 
 ## Cahier des charges
 ### Page d’accueil
