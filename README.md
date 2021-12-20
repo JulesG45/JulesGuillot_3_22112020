@@ -4,8 +4,7 @@ Il s'agit du projet n°3 du parcours "Développeur front-end" chez OpenClassroom
 L'objectif de ce projet est d'apprendre à dynamiser une page web avec des animations CSS.
 
 Le site construit est celui d'une startup du nom de "Ohmyfood!", une entreprise de commande de repas en ligne.
-Un debrief complet du site est disponible ici : ![Debrief](https://s3.eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P3+CSS+animations/DW+P3+-+Brief+creatif+-+Ohmyfood!.pdf)
-
+Un debrief complet du site est disponible ici : [Debrief](https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/DW_P3/Brief%20cre%CC%81atif%20-%20Ohmyfood!.pdf)
 Présentation du visuel du projet :
 
 ![presentation](https://user-images.githubusercontent.com/91476879/146531839-75f066c1-f5ae-4c51-bffb-85ff2efd34ec.png)
